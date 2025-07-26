@@ -56,7 +56,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@greenlineautomation.com",
+      content: "info@greenlineautomation.com",
       description: "Send us an email anytime"
     },
     {

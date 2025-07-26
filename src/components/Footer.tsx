@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-gray-300 text-sm">hello@greenlineautomation.com</span>
+                <span className="text-gray-300 text-sm">info@greenlineautomation.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-gray-300 text-sm">123 Innovation Drive, Tech Valley, CA</span>
+                <span className="text-gray-300 text-sm">123 Innovation Drive, Tech Valley, Covai</span>
               </div>
             </div>
           </motion.div>

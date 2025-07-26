@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Glogo from "../assets/G_logo.png";
 interface LogoProps {
   className?: string;
 }
@@ -14,9 +14,10 @@ const Logo: React.FC<LogoProps> = ({ className = "h-10 w-auto" }) => {
           height="40" 
           viewBox="0 0 40 40" 
           className="rounded-lg"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns={Glogo}
         >
-          {/* Background */}
+
+          
           <rect width="40" height="40" rx="6" fill="hsl(var(--automation-green))" />
           
           {/* Leaf */}
@@ -35,9 +36,9 @@ const Logo: React.FC<LogoProps> = ({ className = "h-10 w-auto" }) => {
           <line x1="26" y1="20" x2="26" y2="28" stroke="white" strokeWidth="2" />
         </svg>
       </div>
-      <span className="text-xl lg:text-2xl font-bold text-foreground">
+      {/* <span className="text-xl lg:text-2xl font-bold text-foreground">
         GreenLine Automation
-      </span>
+      </span> */}
     </div>
   );
 };
