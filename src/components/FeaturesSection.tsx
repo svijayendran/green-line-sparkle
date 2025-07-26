@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { 
-  Cog, 
-  Shield, 
+  Car, 
+  Brain, 
   Zap, 
   BarChart3,
   CheckCircle,
@@ -17,28 +17,28 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      icon: Cog,
-      title: "Advanced Automation",
-      description: "State-of-the-art robotic systems and AI-powered solutions that streamline your manufacturing processes with precision and reliability.",
-      features: ["Robotic Process Automation", "AI-Powered Controls", "Predictive Maintenance"]
+      icon: Car,
+      title: "Automotive IoT Solutions",
+      description: "Advanced IoT-enabled automotive systems that provide real-time monitoring, predictive maintenance, and enhanced vehicle performance.",
+      features: ["Smart Vehicle Integration", "IoT Sensor Networks", "Remote Diagnostics"]
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Military-grade security protocols ensure your automation systems are protected against cyber threats and unauthorized access.",
-      features: ["End-to-End Encryption", "Multi-Factor Authentication", "Real-time Monitoring"]
+      icon: Brain,
+      title: "AI-Powered Automation",
+      description: "Cutting-edge artificial intelligence solutions that adapt to new technological trends and optimize automotive automation processes.",
+      features: ["Machine Learning Algorithms", "Adaptive Controls", "Intelligent Decision Making"]
+    },
+    {
+      icon: BarChart3,
+      title: "Dashboard Analytics",
+      description: "Comprehensive data visualization and analytics dashboards providing real-time insights into automotive performance and operational metrics.",
+      features: ["Real-time Dashboards", "Performance Analytics", "Custom KPI Tracking"]
     },
     {
       icon: Zap,
       title: "Lightning Fast Performance",
-      description: "Optimized algorithms and cutting-edge hardware deliver unmatched speed and efficiency in all automation processes.",
+      description: "Optimized algorithms and cutting-edge hardware deliver unmatched speed and efficiency in automotive automation processes.",
       features: ["Real-time Processing", "Edge Computing", "Microsecond Response Time"]
-    },
-    {
-      icon: BarChart3,
-      title: "Intelligent Analytics",
-      description: "Comprehensive data insights and performance metrics help you make informed decisions and optimize operations.",
-      features: ["Real-time Dashboards", "Predictive Analytics", "Custom Reports"]
     }
   ];
 
@@ -90,8 +90,8 @@ const FeaturesSection = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover the cutting-edge features that make our automation solutions 
-            the preferred choice for industry leaders worldwide.
+            Discover our specialized automotive automation solutions that integrate IoT and AI 
+            technologies to drive innovation in the automotive industry.
           </p>
         </motion.div>
 

@@ -87,8 +87,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Experience cutting-edge automation technology that revolutionizes manufacturing, 
-            increases efficiency, and drives innovation across all industries.
+            Leading the future of automobile automation with cutting-edge IoT and AI solutions. 
+            From dashboard analytics to intelligent automotive systems, we drive innovation in every project.
           </motion.p>
 
           <motion.div

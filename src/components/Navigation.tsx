@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Logo from '@/components/Logo';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,14 +64,8 @@ const Navigation = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">G</span>
-            </div>
-            <span className="text-xl lg:text-2xl font-bold text-foreground">
-              Green Line Automation
-            </span>
+            <Logo />
           </motion.div>
 
           {/* Desktop Navigation */}
