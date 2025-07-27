@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Logo from '@/components/Logo';
 
 const Navigation = () => {
@@ -9,6 +10,8 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showNav, setShowNav] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,18 +35,34 @@ const Navigation = () => {
   }, [lastScrollY]);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsOpen(false);
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setIsOpen(false);
+  };
+
   const navItems = [
-    { name: 'Home', id: 'hero' },
-    { name: 'Features', id: 'features' },
-    { name: 'Testimonials', id: 'testimonials' },
-    { name: 'Contact', id: 'contact' }
+    { name: 'Home', id: 'hero', type: 'scroll' },
+    { name: 'Features', id: 'features', type: 'scroll' },
+    { name: 'Testimonials', id: 'testimonials', type: 'scroll' },
+    { name: 'Contact', id: 'contact', type: 'scroll' },
+    { name: 'Careers', path: '/career', type: 'route' }
   ];
 
   return (
@@ -76,11 +95,11 @@ const Navigation = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
+                onClick={() => item.type === 'scroll' ? scrollToSection(item.id) : handleNavigation(item.path)}
+                className="text-white hover:text-automation-green transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-automation-green transition-all duration-300 group-hover:w-full"></span>
               </motion.button>
             ))}
             <motion.div
@@ -103,7 +122,7 @@ const Navigation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -127,8 +146,8 @@ const Navigation = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    onClick={() => scrollToSection(item.id)}
-                    className="block w-full text-left px-4 py-2 text-foreground hover:text-primary transition-colors duration-300"
+                    onClick={() => item.type === 'scroll' ? scrollToSection(item.id) : handleNavigation(item.path)}
+                    className="block w-full text-left px-4 py-2 text-white hover:text-automation-green transition-colors duration-300"
                   >
                     {item.name}
                   </motion.button>
