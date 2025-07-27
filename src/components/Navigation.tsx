@@ -96,7 +96,7 @@ const Navigation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => item.type === 'scroll' ? scrollToSection(item.id) : handleNavigation(item.path)}
-                className="text-white hover:text-automation-green transition-colors duration-300 font-medium relative group"
+                className={`${isScrolled ? 'text-foreground hover:text-automation-green' : 'text-white hover:text-automation-green'} transition-colors duration-300 font-medium relative group`}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-automation-green transition-all duration-300 group-hover:w-full"></span>
@@ -122,7 +122,7 @@ const Navigation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="md:hidden p-2 text-white"
+            className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-white'} transition-colors duration-300`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -147,7 +147,7 @@ const Navigation = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     onClick={() => item.type === 'scroll' ? scrollToSection(item.id) : handleNavigation(item.path)}
-                    className="block w-full text-left px-4 py-2 text-white hover:text-automation-green transition-colors duration-300"
+                    className="block w-full text-left px-4 py-2 text-foreground hover:text-automation-green transition-colors duration-300"
                   >
                     {item.name}
                   </motion.button>
