@@ -6,6 +6,7 @@ import { Separator } from '@/components/ui/separator';
 import { careerPageData } from '@/components/input_field/career.js';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import AnimatedBackground from '@/components/AnimatedBackground';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const Career = () => {
@@ -19,7 +20,8 @@ const Career = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <AnimatedBackground variant="tech" />
       <Navigation />
       
       {/* Hero Section */}

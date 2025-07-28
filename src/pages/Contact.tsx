@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { contactConfig } from '@/components/input_field/contact';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import AnimatedBackground from '@/components/AnimatedBackground';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -41,7 +42,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <AnimatedBackground variant="particles" />
       <Navigation />
       
       {/* Hero Section */}
