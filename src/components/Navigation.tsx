@@ -60,6 +60,8 @@ const Navigation = () => {
   const navItems = [
     { name: 'Home', id: 'hero', type: 'scroll' },
     { name: 'About', path: '/about', type: 'route' },
+    { name: 'Industries', path: '/industries', type: 'route' },
+    { name: 'Projects', path: '/projects', type: 'route' },
     { name: 'Features', id: 'features', type: 'scroll' },
     { name: 'Testimonials', id: 'testimonials', type: 'scroll' },
     { name: 'Contact', path: '/contact', type: 'route' },
