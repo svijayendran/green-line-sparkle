@@ -125,7 +125,7 @@ const HeroSection = () => {
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
             {[
-              { number: '500+', label: 'Projects Completed' },
+              { number: '100%', label: 'Commitment to Innovation' },
               { number: '99.9%', label: 'Uptime Guarantee' },
               { number: '24/7', label: 'Support Available' }
             ].map((stat, index) => (
