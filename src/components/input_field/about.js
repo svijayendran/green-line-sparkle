@@ -35,20 +35,36 @@ export const aboutConfig = {
     description: "Our diverse team of engineers, technicians, and industry experts brings decades of combined experience to every project.",
     members: [
       {
-        name: "John Smith",
+        name: "Malarvizhi",
         position: "Chief Executive Officer",
-        experience: "20+ years in automation industry"
+        // experience: "20+ years in automation industry"
       },
       {
-        name: "Sarah Johnson",
-        position: "Head of Engineering",
-        experience: "15+ years in industrial systems"
+        name: "Santhosh",
+        position: "Data Engineer & Deliverables Manager",
+        // experience: "15+ years in industrial systems"
       },
       {
-        name: "Michael Chen",
-        position: "Lead Automation Specialist",
-        experience: "12+ years in robotics and AI"
+        name: "Vijay",
+        position: "Lead Automation Specialist & Control Systems Engineer",
+        // experience: "12+ years in robotics and AI"
+      },
+      {
+        name: "Manoj",
+        position: "Data Analyst & Market Research Analyst",
+        // experience: "12+ years in robotics and AI"
+      },
+      {
+        name: "Madhu",
+        position: "Business Analyst & UX/UI Designer",
+        // experience: "12+ years in robotics and AI"
+      },
+      {
+        name: "Sanjeev",
+        position: "Business Intelligence Developer",
+        // experience: "12+ years in robotics and AI"
       }
+      
     ]
   },
   stats: [
