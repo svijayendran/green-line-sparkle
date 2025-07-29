@@ -1,13 +1,16 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import AnimatedBackground from '@/components/AnimatedBackground';
 import { industriesContent } from '@/components/input_field/industries';
 import IndusHeroSection from '@/components/industriales_Hero';
 
 const Industries = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-background relative">
       <AnimatedBackground variant="data" />      
+=======
+    <div className="min-h-screen bg-background">
+>>>>>>> cfab771405395502a5c516ba1eec24de9e3e3545
       <Navigation />
       <IndusHeroSection />
       {/* Hero Section */}
