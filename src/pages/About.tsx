@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { aboutConfig } from '@/components/input_field/about';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import AnimatedBackground from '@/components/AnimatedBackground';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Target, Eye, Award } from 'lucide-react';
 import AbtHeroSection from '@/components/about_Hero';
@@ -11,8 +11,7 @@ const About = () => {
   const { hero, mission, vision, values, team, stats } = aboutConfig;
 
   return (
-    <div className="min-h-screen bg-background relative">
-      <AnimatedBackground variant="tech" />
+    <div className="min-h-screen bg-background">
       <Navigation />
       <AbtHeroSection />
       {/* Hero Section */}
