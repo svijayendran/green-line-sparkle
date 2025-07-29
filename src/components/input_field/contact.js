@@ -9,15 +9,15 @@ export const contactConfig = {
     locations: [
       {
         title: "Headquarters",
-        address: "123 Automation Drive, Tech City, TC 12345",
-        phone: "+1 (555) 123-4567",
+        address: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
+        phone: "+91 7904698208",
         email: "info@greenlineautomations.com"
       },
       {
         title: "Regional Office",
-        address: "456 Innovation Blvd, Metro City, MC 67890",
-        phone: "+1 (555) 987-6543",
-        email: "regional@greenlineautomations.com"
+        address: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
+        phone: "+91 7904698208",
+        email: "info@greenlineautomations.com"
       }
     ],
     businessHours: {

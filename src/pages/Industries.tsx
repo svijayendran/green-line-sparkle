@@ -2,13 +2,14 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import { industriesContent } from '@/components/input_field/industries';
+import IndusHeroSection from '@/components/industriales_Hero';
 
 const Industries = () => {
   return (
     <div className="min-h-screen bg-background relative">
-      <AnimatedBackground variant="data" />
+      <AnimatedBackground variant="data" />      
       <Navigation />
-      
+      <IndusHeroSection />
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">

@@ -2,14 +2,15 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import { projectsContent } from '@/components/input_field/projects';
-
+import ProjectHeroSection from '@/components/project_Hero';
 const Projects = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <AnimatedBackground variant="particles" />
       <Navigation />
+      <ProjectHeroSection />
       
-      {/* Hero Section */}
+      
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">

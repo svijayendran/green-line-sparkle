@@ -6,7 +6,7 @@ const navItems = [
   ];
 
 
-const features = [
+  const features = [
     {
       icon: Car,
       title: "Automotive IoT Solutions",
@@ -39,19 +39,19 @@ const features = [
       {
         icon: Mail,
         title: "Email Us",
-        content: "info@greenlineautomation.com",
+        content: "info@greenlineautomations.com",
         description: "Send us an email anytime"
       },
       {
         icon: Phone,
         title: "Call Us",
-        content: "+1 (555) 123-4567",
+        content: "+91 7904698208",
         description: "Mon-Fri from 8am to 5pm"
       },
       {
         icon: MapPin,
         title: "Visit Us",
-        content: "123 Innovation Drive, Tech Valley, CA 94025",
+        content: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
         description: "Our headquarters"
       }
     ];

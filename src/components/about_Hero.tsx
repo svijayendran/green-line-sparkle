@@ -1,9 +1,11 @@
+
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-automation.jpg';
 
-const HeroSection = () => {
+const AbtHeroSection = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -47,7 +49,7 @@ const HeroSection = () => {
               opacity: [0.6, 1, 0.6],
             }}
             transition={{
-              duration: 3,
+              duration: 1,
               repeat: Infinity,
               delay: i * 0.5,
             }}
@@ -152,7 +154,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
+        transition={{ duration: 3, delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <motion.div
@@ -171,4 +173,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default AbtHeroSection;

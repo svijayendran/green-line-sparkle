@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Target, Eye, Award } from 'lucide-react';
+import AbtHeroSection from '@/components/about_Hero';
 
 const About = () => {
   const { hero, mission, vision, values, team, stats } = aboutConfig;
@@ -13,7 +14,7 @@ const About = () => {
     <div className="min-h-screen bg-background relative">
       <AnimatedBackground variant="tech" />
       <Navigation />
-      
+      <AbtHeroSection />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

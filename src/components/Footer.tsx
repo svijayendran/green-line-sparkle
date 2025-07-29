@@ -67,11 +67,18 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">+91 7904698208</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-gray-300 text-sm">123 Innovation Drive, Tech Valley, Covai</span>
+                <span className="text-gray-300 text-sm">
+                  No. 3 / 503 A,
+                  V K V Nagar,
+                  Ashokapuram,
+                  Nggo colony,
+                  Coimbatore,
+                  TaimlNadu 641022
+                  </span>
               </div>
             </div>
           </motion.div>

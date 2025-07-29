@@ -64,7 +64,6 @@ const Navigation = () => {
     { name: 'Projects', path: '/projects', type: 'route' },
     { name: 'Features', id: 'features', type: 'scroll' },
     { name: 'Testimonials', id: 'testimonials', type: 'scroll' },
-    { name: 'Contact', path: '/contact', type: 'route' },
     { name: 'Careers', path: '/career', type: 'route' }
   ];
 

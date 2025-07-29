@@ -23,6 +23,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phn: '',
     company: '',
     message: ''
   });
@@ -48,7 +49,7 @@ const ContactSection = () => {
         title: "Message Sent Successfully!",
         description: "We'll get back to you within 24 hours.",
       });
-      setFormData({ name: '', email: '', company: '', message: '' });
+      setFormData({ name: '', email: '', phn : '', company: '', message: '' });
     }, 2000);
   };
 
@@ -56,19 +57,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "info@greenlineautomation.com",
+      content: "info@greenlineautomations.com",
       description: "Send us an email anytime"
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+1 (555) 123-4567",
+      content: "+91 7904698208",
       description: "Mon-Fri from 8am to 5pm"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "123 Innovation Drive, Tech Valley, CA 94025",
+      content: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
       description: "Our headquarters"
     }
   ];
@@ -145,7 +146,7 @@ const ContactSection = () => {
                         onChange={handleInputChange}
                         required
                         className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                        placeholder="John Doe"
+                        placeholder="Enter Your Name"
                       />
                     </div>
                     <div className="space-y-2">
@@ -159,11 +160,24 @@ const ContactSection = () => {
                         onChange={handleInputChange}
                         required
                         className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                        placeholder="john@company.com"
+                        placeholder="company@company.com"
                       />
                     </div>
                   </div>
                   
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      Mobile Number
+                    </label>
+                    <Input
+                      name="company"
+                      value={formData.phn}
+                      onChange={handleInputChange}
+                      className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                      placeholder="Mobile Number"
+                    />
+                  </div>
+
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">
                       Company Name
