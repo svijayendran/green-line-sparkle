@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-automation.jpg';
+import aboutHeroImage from '@/assets/about-hero.jpg';
 
 const AbtHeroSection = () => {
   const scrollToContact = () => {
@@ -27,7 +27,7 @@ const AbtHeroSection = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${heroImage})`,
+            backgroundImage: `url(${aboutHeroImage})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
@@ -67,7 +67,7 @@ const AbtHeroSection = () => {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary border border-primary/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              Next-Generation Automation Solutions
+              About GreenLine Automations
             </span>
           </motion.div>
 
@@ -77,9 +77,9 @@ const AbtHeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            Transform Your
+            Pioneering Excellence in
             <span className="block bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-              Industrial Future
+              Digital Innovation
             </span>
           </motion.h1>
 
@@ -89,8 +89,8 @@ const AbtHeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Leading the future of Industrial Automation with Cutting-edge IoT and AI solutions. 
-            From Data analytics to Intelligent Automotive Systems, we drive Innovation in every project.
+            Empowering businesses through expert collaboration, innovative solutions, and cutting-edge technology. 
+            Our team combines AI, IoT, and data analytics expertise to deliver transformative results for every client.
           </motion.p>
 
           <motion.div
@@ -120,14 +120,14 @@ const AbtHeroSection = () => {
           </motion.div>
 
           {/* Stats */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
             {[
-              { number: '500+', label: 'Projects Completed' },
+              { number: '100%', label: 'Projects Completed' },
               { number: '99.9%', label: 'Uptime Guarantee' },
               { number: '24/7', label: 'Support Available' }
             ].map((stat, index) => (
@@ -146,7 +146,7 @@ const AbtHeroSection = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
 

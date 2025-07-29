@@ -63,10 +63,10 @@ const Navigation = () => {
     { name: 'Industries', path: '/industries', type: 'route' },
     { name: 'Projects', path: '/projects', type: 'route' },
     { name: 'Features', id: 'features', type: 'scroll' },
-    { name: 'Testimonials', id: 'testimonials', type: 'scroll' },
+    
     { name: 'Careers', path: '/career', type: 'route' }
   ];
-
+// { name: 'Testimonials', id: 'testimonials', type: 'scroll' },
   return (
     <motion.nav
       initial={{ y: 0 }}

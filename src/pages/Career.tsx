@@ -21,7 +21,7 @@ const Career = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
-      <AnimatedBackground variant="tech" />
+      {/* <AnimatedBackground variant="tech" /> */}
       <Navigation />
       
       {/* Hero Section */}

@@ -1,10 +1,10 @@
 import React from 'react';
-import Glogo from "../assets/G_logo.png";
+import Glogo from "../assets/GL_logo.png";
 interface LogoProps {
   className?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ className = "h-12 w-auto" }) => {
+const Logo: React.FC<LogoProps> = ({ className = "h-24 w-auto" }) => {
   return (
     <div className={`flex items-center ${className}`}>
       <img 
