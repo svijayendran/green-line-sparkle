@@ -69,16 +69,16 @@ export const aboutConfig = {
   },
   stats: [
     {
-      number: "500+",
-      label: "Projects Completed"
+      number: "5X",
+      label: "Faster Deployment Time"
     },
     {
-      number: "15+",
-      label: "Years of Experience"
+      number: "24/7",
+      label: "Support Availability"
     },
     {
-      number: "50+",
-      label: "Industries Served"
+      number: "100%",
+      label: "Founder-Led Innovation"
     },
     {
       number: "99%",
