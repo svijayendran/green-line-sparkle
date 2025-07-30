@@ -79,14 +79,14 @@ const Navigation = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-14 md:h-16 lg:h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Logo isScrolled={isScrolled} />
+            <Logo isScrolled={isScrolled} className="h-10 md:h-16 lg:h-20 w-auto" />
           </motion.div>
 
           {/* Desktop Navigation */}
