@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { projectsContent } from '@/components/input_field/projects';
 import ProjectHeroSection from '@/components/project_Hero';
-import projectHmiImage from '@/assets/project-hmi.jpg';
+import projectHmiImage from '@/assets/projects-hmi.png';
 import projectAnalyticsImage from '@/assets/project-analytics.jpg';
 import projectAutomationImage from '@/assets/project-automation.jpg';
 import projectWebMobileImage from '@/assets/project-webmobile.jpg';

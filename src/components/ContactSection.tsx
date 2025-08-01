@@ -69,7 +69,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
+      content: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TamilNadu 641022",
       description: "Our headquarters"
     }
   ];
