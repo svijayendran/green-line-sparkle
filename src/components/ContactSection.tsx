@@ -167,12 +167,14 @@ const ContactSection = () => {
                   
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">
-                      Mobile Number
+                      Mobile Number *
                     </label>
                     <Input
-                      name="company"
+                      name="phn"
+                      type="tel"
                       value={formData.phn}
                       onChange={handleInputChange}
+                      required
                       className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 focus:border-primary"
                       placeholder="Mobile Number"
                     />
