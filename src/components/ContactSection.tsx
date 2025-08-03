@@ -16,6 +16,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -29,6 +30,7 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -38,26 +40,63 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      setFormData({ name: '', email: '', phn : '', company: '', message: '' });
-    }, 2000);
+  //   // Simulate form submission
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     toast({
+  //       title: "Message Sent Successfully!",
+  //       description: "We'll get back to you within 24 hours.",
+  //     });
+  //     setFormData({ name: '', email: '', phn : '', company: '', message: '' });
+  //   }, 2000);
+  // };
+  
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const templateParams = {
+    name: formData.name,
+    email: formData.email,
+    phn: formData.phn,
+    company: formData.company,
+    message: formData.message
   };
 
+  try {
+    await emailjs.send(
+      'your_service_id',      // Replace with your service ID
+      'your_template_id',     // Replace with your template ID
+      templateParams,
+      'your_public_key'       // Replace with your public key
+    );
+
+    toast({
+      title: "Message Sent Successfully!",
+      description: "We'll get back to you within 24 hours.",
+    });
+
+    setFormData({ name: '', email: '', phn: '', company: '', message: '' });
+  } catch (error) {
+    toast({
+      title: "Failed to send message.",
+      description: "Please try again later.",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+// "info@greenlineautomations.com",
   const contactInfo = [
     {
       icon: Mail,
       title: "Email Us",
-      content: "info@greenlineautomations.com",
+      content: "Support@greenlineautomation.com",
       description: "Send us an email anytime"
     },
     {
@@ -87,8 +126,8 @@ const ContactSection = () => {
     },
     {
       icon: CheckCircle,
-      title: "Proven Results",
-      description: "Join 500+ companies that trust our solutions"
+      title: "Driven by Your Success",
+      description: "We focus on building long-term value for every client we serve"
     }
   ];
 

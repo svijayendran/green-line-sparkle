@@ -2,15 +2,15 @@ export const aboutConfig = {
   hero: {
     title: "About Green Line Automations",
     subtitle: "Leading the future of industrial automation",
-    description: "With over 15 years of experience, we specialize in creating innovative automation solutions that drive efficiency and growth for businesses worldwide."
+    description: "Green Line Automations is built on a passion for innovation, delivering intelligent automation solutions that prepare businesses for the future."
   },
   mission: {
     title: "Our Mission",
-    description: "To revolutionize industries through cutting-edge automation technology, helping businesses achieve unprecedented levels of efficiency, safety, and profitability."
+    description:"To revolutionize industries through cutting-edge automation technology, helping businesses achieve new levels of efficiency, safety, and sustainability while maximizing long-term profitability."
   },
   vision: {
     title: "Our Vision",
-    description: "To be the global leader in automation solutions, setting new standards for innovation and reliability in industrial technology."
+    description: "To lead the future of automation with solutions that are not only innovative and reliable but also environmentally conscious and socially responsible."
   },
   values: [
     {
