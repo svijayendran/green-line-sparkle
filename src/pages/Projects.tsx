@@ -7,6 +7,8 @@ import projectAnalyticsImage from '@/assets/project-analytics.jpg';
 import projectAutomationImage from '@/assets/project-automation.jpg';
 import projectWebMobileImage from '@/assets/project-webmobile.jpg';
 import projectAiMlImage from '@/assets/project-aiml.jpg';
+import { Link } from 'react-router-dom';
+
 const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -49,9 +51,18 @@ const Projects = () => {
                       {project.type}
                     </span>
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-bold text-foreground">
-                    {project.title}
-                  </h3>
+                  {index === 0 ? (
+                    <Link to="/projects/hmi" className="group">
+                      <h3 className="text-3xl lg:text-4xl font-bold text-foreground group-hover:text-primary transition-colors cursor-pointer">
+                        {project.title}
+                        <span className="ml-2 text-sm font-normal text-primary opacity-0 group-hover:opacity-100 transition-opacity">View Details →</span>
+                      </h3>
+                    </Link>
+                  ) : (
+                    <h3 className="text-3xl lg:text-4xl font-bold text-foreground">
+                      {project.title}
+                    </h3>
+                  )}
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
