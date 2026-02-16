@@ -138,7 +138,7 @@ export const careerPageData = {
     title: "Ready to Join Us?",
     subtitle: "Get in touch with our HR team",
     email: "info@greenlineautomation.com",
-    phone: "+91 7904698208",
+    phone: "+91 8072317340",
     address: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
   }
 };
