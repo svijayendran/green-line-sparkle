@@ -45,7 +45,7 @@ const navItems = [
       {
         icon: Phone,
         title: "Call Us",
-        content: "+91 7904698208",
+        content: "+91 9443678745",
         description: "Mon-Fri from 8am to 5pm"
       },
       {
