@@ -19,6 +19,12 @@ export const projectsContent = {
       icon: "🔧"
     },
     {
+      title: "HR & Employee Management System",
+      type: "Full Stack / HR Tech",
+      description: "Built a comprehensive HR management platform featuring an Employee Dashboard and Canteen Dashboard to streamline internal operations. The system centralizes employee data management, attendance tracking, leave workflows, and payroll processing into a single unified interface. The Canteen module automates meal tracking, daily menu management, and employee food allowance deductions. Built with React on the frontend for a responsive, interactive UI and Python on the backend for business logic and API services, with SQL Server (SSMS) as the database for structured enterprise data management.",
+      icon: "👥"
+    },
+    {
       title: "Advanced Data Analytics Dashboard",
       type: "Data Visualization / BI", 
       description: "Engineered a cutting-edge real-time analytics platform that transforms complex multi-source data streams into actionable business intelligence. This comprehensive solution handles massive datasets from IoT sensors, enterprise systems, and external APIs, processing over 1 million data points per hour. The dashboard features dynamic visualization components including interactive time-series charts, heat maps, scatter plots, and geographical mapping capabilities. Advanced features include machine learning-powered anomaly detection, predictive trend analysis, and automated alert systems. The platform supports role-based access control, customizable KPI widgets, scheduled report generation, and seamless integration with existing business systems. Users can create custom queries using an intuitive drag-and-drop interface, export data in multiple formats, and set up automated workflows for data-driven decision making.",

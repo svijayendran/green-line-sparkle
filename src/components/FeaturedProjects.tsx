@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
 // Image imports
 import projectHmiImage from '@/assets/projects-hmi.png';
+import projectHrImage from '@/assets/project-hr.png';
 import projectAnalyticsImage from '@/assets/project-analytics.jpg';
 import projectAutomationImage from '@/assets/project-automation.jpg';
 import projectWebMobileImage from '@/assets/project-webmobile.jpg';
@@ -20,10 +21,23 @@ const FeaturedProjects = () => {
       badge: 'IoT',
       badgeColor: 'bg-automation-green',
       image: projectHmiImage,
-      link: '/projects#project-hmi'
+      link: '/projects#project-hmi',
+      caseStudyLink: '/projects/hmi',
     },
     {
       id: 2,
+      title: 'HR & Employee Management System',
+      type: 'Full Stack / HR Tech',
+      description:
+        'A full-stack HR platform — "People App" — featuring dual portals for HR admins and employees. Covers attendance, payroll, leave management, canteen tracking, and shift allocation for 775+ employees.',
+      badge: 'HR TECH',
+      badgeColor: 'bg-automation-green',
+      image: projectHrImage,
+      link: '/projects#project-hr',
+      caseStudyLink: '/projects/hr',
+    },
+    {
+      id: 3,
       title: 'Advanced Data Analytics Dashboard',
       type: 'Data Visualization / BI',
       description:
@@ -31,10 +45,10 @@ const FeaturedProjects = () => {
       badge: 'DATA VISUALIZATION / BI',
       badgeColor: 'bg-automation-green',
       image: projectAnalyticsImage,
-      link: '/projects#project-analytics'
+      link: '/projects#project-analytics',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Intelligent Web & Document Automation Suite',
       type: 'Automation / AI',
       description:
@@ -42,10 +56,10 @@ const FeaturedProjects = () => {
       badge: 'AUTOMATION / AI',
       badgeColor: 'bg-automation-green',
       image: projectAutomationImage,
-      link: '/projects#project-automation'
+      link: '/projects#project-automation',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Enterprise Web & Mobile Development Portfolio',
       type: 'Full Stack / Cross-Platform',
       description:
@@ -53,10 +67,10 @@ const FeaturedProjects = () => {
       badge: 'FULL STACK',
       badgeColor: 'bg-automation-green',
       image: projectWebMobileImage,
-      link: '/projects#project-web-mobile'
+      link: '/projects#project-web-mobile',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Advanced AI & Machine Learning Solutions',
       type: 'AI Product Development',
       description:
@@ -64,7 +78,7 @@ const FeaturedProjects = () => {
       badge: 'AI & ML',
       badgeColor: 'bg-automation-green',
       image: projectAiMlImage,
-      link: '/projects#project-ai-ml'
+      link: '/projects#project-ai-ml',
     }
   ];
 
@@ -115,49 +129,42 @@ const FeaturedProjects = () => {
         {/* Projects Hover Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 auto-rows-fr">
           {projects.map((project, index) => (
-            <motion.article
+            <Link
               key={project.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: index * 0.08 }}
-              viewport={{ once: true }}
-              className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-xl ${
-                index === 0 ? 'sm:col-span-2 xl:col-span-2' : ''
+              to={project.link}
+              className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-xl block ${
+                index === 0 || index === 1 ? 'sm:col-span-2 xl:col-span-2' : ''
               }`}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <motion.article
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: index * 0.08 }}
+                viewport={{ once: true }}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/20" />
 
-              <div className="absolute left-5 right-5 top-5">
-                <span
-                  className={`inline-flex px-3 py-1 ${project.badgeColor} text-black text-xs font-bold rounded-full`}
-                >
-                  {project.badge}
-                </span>
-              </div>
+                <div className="absolute left-5 right-5 top-5">
+                  <span className={`inline-flex px-3 py-1 ${project.badgeColor} text-black text-xs font-bold rounded-full`}>
+                    {project.badge}
+                  </span>
+                </div>
 
-              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 text-white">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-2">{project.type}</p>
-                <h3 className="text-xl md:text-2xl font-bold leading-tight mb-3">{project.title}</h3>
-
-                <p className="text-sm md:text-base text-white/85 max-w-2xl max-h-0 opacity-0 overflow-hidden transition-all duration-300 md:group-hover:max-h-40 md:group-hover:opacity-100 md:group-hover:mb-4">
-                  {project.description}
-                </p>
-
-                <Link
-                  to={project.link}
-                  className="inline-flex items-center gap-2 text-white font-semibold transition-all duration-300 md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100"
-                >
-                  View Case Study
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </motion.article>
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 text-white">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70 mb-2">{project.type}</p>
+                  <h3 className="text-xl md:text-2xl font-bold leading-tight mb-3">{project.title}</h3>
+                  <p className="text-sm md:text-base text-white/85 max-w-2xl max-h-0 opacity-0 overflow-hidden transition-all duration-300 md:group-hover:max-h-40 md:group-hover:opacity-100">
+                    {project.description}
+                  </p>
+                </div>
+              </motion.article>
+            </Link>
           ))}
         </div>
       </div>

@@ -8,6 +8,7 @@ import ProjectHeroSection from '@/components/project_Hero';
 import { projectsContent } from '@/components/input_field/projects';
 
 import projectHmiImage from '@/assets/projects-hmi.png';
+import projectHrImage from '@/assets/project-hr.png';
 import projectAnalyticsImage from '@/assets/project-analytics.jpg';
 import projectAutomationImage from '@/assets/project-automation.jpg';
 import projectWebMobileImage from '@/assets/project-webmobile.jpg';
@@ -15,6 +16,7 @@ import projectAiMlImage from '@/assets/project-aiml.jpg';
 
 const projectImages = [
   projectHmiImage,
+  projectHrImage,
   projectAnalyticsImage,
   projectAutomationImage,
   projectWebMobileImage,
@@ -23,6 +25,7 @@ const projectImages = [
 
 const projectAnchorIds = [
   'project-hmi',
+  'project-hr',
   'project-analytics',
   'project-automation',
   'project-web-mobile',
@@ -34,6 +37,11 @@ const projectHighlights = [
     'Live diagnostics and operator-first control workflows',
     'Predictive maintenance alerts for faster intervention',
     'Safer traction system performance with real-time monitoring'
+  ],
+  [
+    'Centralized employee data and attendance management',
+    'Automated canteen meal tracking and allowance deductions',
+    'Streamlined leave workflows and payroll processing'
   ],
   [
     'Unified KPI visibility from distributed plant systems',
@@ -213,16 +221,20 @@ const Projects = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.55, delay: index * 0.04 }}
                 whileHover={{ y: -8 }}
-                className={`group scroll-mt-32 rounded-2xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-2xl hover:border-automation-green/40 transition-all duration-300 ${index === 0 ? 'cursor-pointer' : ''}`}
-                onClick={() => index === 0 && navigate('/projects/hmi')}
+                className={`group scroll-mt-32 rounded-2xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-2xl hover:border-automation-green/40 transition-all duration-300 ${index === 0 || index === 1 ? 'cursor-pointer' : ''}`}
+                onClick={() => {
+                  if (index === 0) navigate('/projects/hmi');
+                  if (index === 1) navigate('/projects/hr');
+                }}
                 onKeyDown={(event) => {
-                  if (index === 0 && (event.key === 'Enter' || event.key === ' ')) {
+                  if ((index === 0 || index === 1) && (event.key === 'Enter' || event.key === ' ')) {
                     event.preventDefault();
-                    navigate('/projects/hmi');
+                    if (index === 0) navigate('/projects/hmi');
+                    if (index === 1) navigate('/projects/hr');
                   }
                 }}
-                role={index === 0 ? 'button' : undefined}
-                tabIndex={index === 0 ? 0 : -1}
+                role={index === 0 || index === 1 ? 'button' : undefined}
+                tabIndex={index === 0 || index === 1 ? 0 : -1}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -240,11 +252,11 @@ const Projects = () => {
                     {project.icon}
                     {project.type}
                   </span>
-                  {index === 0 && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/70 px-5 py-4 flex items-center justify-between">
-                      <span className="inline-flex items-center gap-2 text-white font-semibold text-sm">
+                  {(index === 0 || index === 1) && (
+                    <div className="absolute bottom-5 left-6">
+                      <span className="inline-flex items-center gap-2 text-white font-semibold text-sm transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
                         View Case Study
-                        <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </span>
                     </div>
                   )}
