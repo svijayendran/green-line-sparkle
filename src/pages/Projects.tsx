@@ -124,7 +124,7 @@ const Projects = () => {
               transition={{ duration: 0.55 }}
               className="space-y-4"
             >
-              <p className="text-base font-semibold uppercase tracking-[0.22em] text-automation-green">
+              <p className="text-xl font-semibold uppercase tracking-[0.22em] text-automation-green">
                 Startup-style project stories
               </p>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">

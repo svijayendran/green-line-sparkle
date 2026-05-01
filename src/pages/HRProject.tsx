@@ -352,7 +352,7 @@ const HRProject = () => {
         </div>
         <div className="max-w-5xl mx-auto relative text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="text-base font-semibold uppercase tracking-[0.22em] text-automation-green mb-4">Project Impact</p>
+            <p className="text-xl font-semibold uppercase tracking-[0.22em] text-automation-green mb-4">Project Impact</p>
             <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">Built. Deployed. Trusted.</h2>
             <p className="text-slate-300 text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
               People App replaced manual spreadsheets and fragmented HR tools with a single unified platform —

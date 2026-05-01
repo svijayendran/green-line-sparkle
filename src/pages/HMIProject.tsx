@@ -286,7 +286,7 @@ const HMIProject = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-base font-semibold uppercase tracking-[0.22em] text-automation-green mb-4">Project Impact</p>
+            <p className="text-xl font-semibold uppercase tracking-[0.22em] text-automation-green mb-4">Project Impact</p>
             <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
               Deployed. Measured. Proven.
             </h2>

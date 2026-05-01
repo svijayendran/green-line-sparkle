@@ -37,7 +37,7 @@ const AutomationFlowAnimation = () => (
       {/* heading */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
         <div>
-          <p className="text-base font-semibold uppercase tracking-[0.22em] text-automation-green mb-3">How it works</p>
+          <p className="text-xl font-semibold uppercase tracking-[0.22em] text-automation-green mb-3">How it works</p>
           <h3 className="text-2xl md:text-4xl font-black text-white leading-tight">
             From machine signal to
             <span className="text-automation-green"> actionable insight</span>
@@ -212,7 +212,7 @@ const Products = () => {
         />
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <p className="text-base font-semibold uppercase tracking-[0.22em] text-automation-green mb-3">What we deliver</p>
+            <p className="text-xl font-semibold uppercase tracking-[0.22em] text-automation-green mb-3">What we deliver</p>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
               {productList.length} precision-built modules<br className="hidden md:block" /> deployed on factory floors.
             </h2>
@@ -294,7 +294,7 @@ const Products = () => {
       {/* ── Capabilities bar ── */}
       <section className="py-14 px-4 bg-muted/30 border-t border-border/60">
         <div className="max-w-7xl mx-auto">
-          <p className="text-base font-semibold uppercase tracking-[0.22em] text-automation-green mb-8">Built-in capabilities across all modules</p>
+          <p className="text-xl font-semibold uppercase tracking-[0.22em] text-automation-green mb-8">Built-in capabilities across all modules</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {categories.map((cat, i) => {
               const Icon = cat.icon;

@@ -4,7 +4,7 @@ export const productscontent = {
   hero: {
     title: "Precision Automation for Industrial Excellence",
     subtitle: "Precision Engineered Solutions",
-    description: "From real-time traceability to automated data pipelines, we provide the specialized modules to optimize your 1.2L & 2L engine block production lines.",
+    description: "From real-time quality traceability to automated data pipelines and live production dashboards — our precision-built modules empower factory floors to operate smarter, faster, and with zero manual overhead.",
   },
   
   categories: [

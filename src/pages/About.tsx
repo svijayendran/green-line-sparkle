@@ -48,7 +48,7 @@ const About = () => {
             className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 items-end"
           >
             <div>
-              <p className="text-base uppercase tracking-[0.22em] font-semibold text-automation-green mb-3">Who we are</p>
+              <p className="text-xl uppercase tracking-[0.22em] font-semibold text-automation-green mb-3">Who we are</p>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-5">
                 Building industrial intelligence
                 <span className="block text-automation-green">with product-level precision.</span>
@@ -59,7 +59,7 @@ const About = () => {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <p className="text-base uppercase tracking-[0.22em] text-automation-green font-semibold mb-3">Why clients stay</p>
+              <p className="text-xl uppercase tracking-[0.22em] text-automation-green font-semibold mb-3">Why clients stay</p>
               <div className="space-y-3 text-sm text-foreground/90">
                 <p>Founder-led delivery with strong execution ownership.</p>
                 <p>Production-first engineering across AI, IoT, and analytics.</p>
@@ -133,7 +133,7 @@ const About = () => {
             variants={sectionVariants}
             className="mb-10"
           >
-            <p className="text-base uppercase tracking-[0.22em] font-semibold text-automation-green mb-3">Principles</p>
+            <p className="text-xl uppercase tracking-[0.22em] font-semibold text-automation-green mb-3">Principles</p>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">How we think while building</h2>
           </motion.div>
 
@@ -177,7 +177,7 @@ const About = () => {
             variants={sectionVariants}
             className="mb-10 text-center"
           >
-            <p className="text-base uppercase tracking-[0.22em] font-semibold text-automation-green mb-3">Team</p>
+            <p className="text-xl uppercase tracking-[0.22em] font-semibold text-automation-green mb-3">Team</p>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{team.title}</h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">{team.description}</p>
           </motion.div>

@@ -10,7 +10,7 @@ export const aboutConfig = {
   },
   vision: {
     title: "Our Vision",
-    description: "To lead the future of automation with solutions that are not only innovative and reliable but also environmentally conscious and socially responsible."
+    description: "To lead the future of industrial automation under the GreenLine promise — building solutions that are intelligent, reliable, and environmentally responsible. We envision a manufacturing world where efficiency and sustainability go hand in hand: reducing waste, lowering energy consumption, and enabling factories to operate cleaner and smarter. GreenLine is not just our name — it is our commitment to a greener industrial future."
   },
   values: [
     {
