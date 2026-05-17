@@ -45,7 +45,7 @@ export const contactConfig = {
         label: "Email Address",
         type: "email",
         required: true,
-        placeholder: "Enter your email address"
+        placeholder: "example@company.com"
       },
       {
         name: "company",
@@ -59,20 +59,20 @@ export const contactConfig = {
         label: "Phone Number",
         type: "tel",
         required: false,
-        placeholder: "Enter your phone number"
+        placeholder: "e.g. +91 9876543210 or 9876543210"
       },
       {
         name: "subject",
         label: "Subject",
         type: "text",
-        required: true,
+        required: false,
         placeholder: "What's this about?"
       },
       {
         name: "message",
         label: "Message",
         type: "textarea",
-        required: true,
+        required: false,
         placeholder: "Tell us about your automation needs..."
       }
     ]

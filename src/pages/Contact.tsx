@@ -12,6 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Send, MapPin, Phone, Mail } from 'lucide-react';
+import { sendContactEmail } from '@/lib/emailService';
 
 const Contact = () => {
   // Scroll to top on mount
@@ -21,50 +22,68 @@ const Contact = () => {
 
   const { hero, contactInfo, form, services } = contactConfig;
   const headquarters = contactInfo.locations?.[0];
-  const contactApiUrl = import.meta.env.VITE_CONTACT_API_URL;
   const { toast } = useToast();
   const [formData, setFormData] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name || formData.name.trim().length < 2)
+      newErrors.name = 'Please enter your full name (at least 2 characters).';
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email || !emailRegex.test(formData.email))
+      newErrors.email = 'Please enter a valid email address (e.g. example@company.com).';
+
+    if (formData.phone) {
+      const digitsOnly = formData.phone.replace(/[\s\-\(\)]/g, '');
+      const intlFormat = /^\+\d{1,3}\d{6,14}$/;
+      const localFormat = /^\d{7,15}$/;
+      if (!intlFormat.test(digitsOnly) && !localFormat.test(digitsOnly))
+        newErrors.phone = 'Enter a valid phone number (e.g. +91 9876543210 or 9876543210).';
+    }
+
+
+    return newErrors;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    if (errors[name]) setErrors({ ...errors, [name]: '' });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
     setIsSubmitting(true);
 
     try {
-      if (!contactApiUrl) {
-        throw new Error('Contact API is not configured. Set VITE_CONTACT_API_URL.');
-      }
-
-      const response = await fetch(contactApiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      await sendContactEmail({
+        name: formData.name || '',
+        email: formData.email || '',
+        phone: formData.phone || '',
+        company: formData.company || '',
+        subject: formData.subject || '',
+        message: formData.message || '',
       });
-
-      if (!response.ok) {
-        const errorPayload = await response.json().catch(() => null);
-        const message = errorPayload?.message || 'Unable to send message right now.';
-        throw new Error(message);
-      }
 
       toast({
         title: 'Message sent successfully!',
         description: "We'll get back to you within 24 hours.",
       });
       setFormData({});
+      setErrors({});
     } catch (error) {
       toast({
         title: 'Message failed',
-        description: error instanceof Error ? error.message : 'Something went wrong. Please try again.',
+        description: 'Something went wrong. Please try again.',
         variant: 'destructive',
       });
     } finally {
@@ -174,11 +193,10 @@ const Contact = () => {
                             id={field.name}
                             name={field.name}
                             placeholder={field.placeholder}
-                            required={field.required}
                             value={formData[field.name] || ''}
                             onChange={handleInputChange}
                             rows={4}
-                            className="text-black placeholder:text-slate-400"
+                            className={`text-black placeholder:text-slate-400 ${errors[field.name] ? 'border-red-500' : ''}`}
                           />
                         ) : (
                           <Input
@@ -186,11 +204,13 @@ const Contact = () => {
                             name={field.name}
                             type={field.type}
                             placeholder={field.placeholder}
-                            required={field.required}
                             value={formData[field.name] || ''}
                             onChange={handleInputChange}
-                            className="text-black placeholder:text-slate-400"
+                            className={`text-black placeholder:text-slate-400 ${errors[field.name] ? 'border-red-500' : ''}`}
                           />
+                        )}
+                        {errors[field.name] && (
+                          <p className="text-red-500 text-xs mt-1">{errors[field.name]}</p>
                         )}
                       </div>
                     ))}

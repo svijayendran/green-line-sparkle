@@ -8,8 +8,6 @@ import Logo from '@/components/Logo';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [showNav, setShowNav] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -18,22 +16,12 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      setIsScrolled(currentScrollY > 50);
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setShowNav(false);
-      } else {
-        setShowNav(true);
-      }
-
-      setLastScrollY(currentScrollY);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
@@ -69,7 +57,7 @@ const Navigation = () => {
   return (
     <motion.nav
       initial={{ y: 0 }}
-      animate={{ y: showNav ? 0 : -100 }}
+      animate={{ y: 0 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         useSolidNav

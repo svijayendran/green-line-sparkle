@@ -16,7 +16,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import emailjs from 'emailjs-com';
+import { sendContactEmail } from '@/lib/emailService';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -59,21 +59,14 @@ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsSubmitting(true);
 
-  const templateParams = {
-    name: formData.name,
-    email: formData.email,
-    phn: formData.phn,
-    company: formData.company,
-    message: formData.message
-  };
-
   try {
-    await emailjs.send(
-      'your_service_id',      // Replace with your service ID
-      'your_template_id',     // Replace with your template ID
-      templateParams,
-      'your_public_key'       // Replace with your public key
-    );
+    await sendContactEmail({
+      name: formData.name,
+      email: formData.email,
+      phn: formData.phn,
+      company: formData.company,
+      message: formData.message,
+    });
 
     toast({
       title: "Message Sent Successfully!",
