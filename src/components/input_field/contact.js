@@ -11,13 +11,13 @@ export const contactConfig = {
         title: "Headquarters",
         address: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
         phone: "+91 9443678745",
-        email: "info@greenlineautomations.com"
+        email: "info@greenlineautomation.com"
       },
       {
         title: "Regional Office",
         address: "No. 3 / 503 A, V K V Nagar, Ashokapuram, Nggo colony,Coimbatore, TaimlNadu 641022",
         phone: "+91 9443678745",
-        email: "info@greenlineautomations.com"
+        email: "info@greenlineautomation.com"
       }
     ],
     businessHours: {

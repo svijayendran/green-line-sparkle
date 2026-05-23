@@ -89,7 +89,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "Support@greenlineautomation.com",
+      content: "info@greenlineautomation.com",
       description: "Send us an email anytime"
     },
     {

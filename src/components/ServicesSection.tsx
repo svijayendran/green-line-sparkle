@@ -34,13 +34,13 @@ const DashboardIllustration = () => (
     <rect x="50" y="184" width="280" height="160" rx="12" fill="#0d2137" stroke="#1e3a52" strokeWidth="1" />
     <text x="66" y="206" fontSize="10" fill="#94a3b8" fontFamily="sans-serif" fontWeight="600">Production Output — Last 7 Days</text>
     {[
-      { x: 72,  h: 60, c: '#22c55e' },
-      { x: 108, h: 90, c: '#22c55e' },
-      { x: 144, h: 70, c: '#22c55e' },
-      { x: 180, h: 110, c: '#06b6d4' },
-      { x: 216, h: 85, c: '#22c55e' },
-      { x: 252, h: 100, c: '#22c55e' },
-      { x: 288, h: 120, c: '#06b6d4' },
+      { x: 72,  h: 50, c: '#22c55e' },
+      { x: 108, h: 72, c: '#22c55e' },
+      { x: 144, h: 58, c: '#22c55e' },
+      { x: 180, h: 88, c: '#06b6d4' },
+      { x: 216, h: 68, c: '#22c55e' },
+      { x: 252, h: 80, c: '#22c55e' },
+      { x: 288, h: 88, c: '#06b6d4' },
     ].map((bar, i) => (
       <g key={i}>
         <rect x={bar.x} y={310 - bar.h} width="22" height={bar.h} rx="4" fill={bar.c} opacity="0.8" />
@@ -154,7 +154,7 @@ const ServicesSection = () => {
       />
 
       <div className="container mx-auto max-w-7xl relative">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+        <div className="flex flex-col lg:flex-row items-center lg:items-end gap-12">
 
           {/* Left: Text + feature cards */}
           <motion.div
@@ -209,7 +209,7 @@ const ServicesSection = () => {
             whileInView={prefersReducedMotion ? undefined : { opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className="w-full lg:w-1/2 min-w-0 drop-shadow-2xl lg:self-center"
+            className="w-full lg:w-1/2 min-w-0 drop-shadow-2xl lg:mb-[-40px]"
           >
             <DashboardIllustration />
           </motion.div>
