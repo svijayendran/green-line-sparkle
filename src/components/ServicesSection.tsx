@@ -209,7 +209,7 @@ const ServicesSection = () => {
             whileInView={prefersReducedMotion ? undefined : { opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
-            className="w-full lg:w-1/2 min-w-0 drop-shadow-2xl lg:mt-28"
+            className="w-full lg:w-1/2 min-w-0 drop-shadow-2xl lg:self-center"
           >
             <DashboardIllustration />
           </motion.div>
