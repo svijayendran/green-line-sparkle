@@ -9,6 +9,7 @@ import { projectsContent } from '@/components/input_field/projects';
 
 import projectHmiImage from '@/assets/projects-hmi.png';
 import projectHrImage from '@/assets/project-hr.png';
+import projectManufacturingImage from '@/assets/project-manufacturing based ai.png';
 import projectAnalyticsImage from '@/assets/project-analytics.jpg';
 import projectAutomationImage from '@/assets/project-automation.jpg';
 import projectWebMobileImage from '@/assets/project-webmobile.jpg';
@@ -17,6 +18,7 @@ import projectAiMlImage from '@/assets/project-aiml.jpg';
 const projectImages = [
   projectHmiImage,
   projectHrImage,
+  projectManufacturingImage,
   projectAnalyticsImage,
   projectAutomationImage,
   projectWebMobileImage,
@@ -26,6 +28,7 @@ const projectImages = [
 const projectAnchorIds = [
   'project-hmi',
   'project-hr',
+  'project-manufacturing',
   'project-analytics',
   'project-automation',
   'project-web-mobile',
@@ -42,6 +45,11 @@ const projectHighlights = [
     'Centralized employee data and attendance management',
     'Automated canteen meal tracking and allowance deductions',
     'Streamlined leave workflows and payroll processing'
+  ],
+  [
+    'Computer vision defect detection with 99.1% accuracy',
+    'Predictive maintenance reduced unplanned downtime by 40%',
+    'Real-time OEE dashboard across all production cells'
   ],
   [
     'Unified KPI visibility from distributed plant systems',
@@ -221,20 +229,22 @@ const Projects = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.55, delay: index * 0.04 }}
                 whileHover={{ y: -8 }}
-                className={`group scroll-mt-32 rounded-2xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-2xl hover:border-automation-green/40 transition-all duration-300 ${index === 0 || index === 1 ? 'cursor-pointer' : ''}`}
+                className={`group scroll-mt-32 rounded-2xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-2xl hover:border-automation-green/40 transition-all duration-300 ${index === 0 || index === 1 || index === 2 ? 'cursor-pointer' : ''}`}
                 onClick={() => {
                   if (index === 0) navigate('/projects/hmi');
                   if (index === 1) navigate('/projects/hr');
+                  if (index === 2) navigate('/projects/manufacturing');
                 }}
                 onKeyDown={(event) => {
-                  if ((index === 0 || index === 1) && (event.key === 'Enter' || event.key === ' ')) {
+                  if ((index === 0 || index === 1 || index === 2) && (event.key === 'Enter' || event.key === ' ')) {
                     event.preventDefault();
                     if (index === 0) navigate('/projects/hmi');
                     if (index === 1) navigate('/projects/hr');
+                    if (index === 2) navigate('/projects/manufacturing');
                   }
                 }}
-                role={index === 0 || index === 1 ? 'button' : undefined}
-                tabIndex={index === 0 || index === 1 ? 0 : -1}
+                role={index === 0 || index === 1 || index === 2 ? 'button' : undefined}
+                tabIndex={index === 0 || index === 1 || index === 2 ? 0 : -1}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -252,7 +262,7 @@ const Projects = () => {
                     {project.icon}
                     {project.type}
                   </span>
-                  {(index === 0 || index === 1) && (
+                  {(index === 0 || index === 1 || index === 2) && (
                     <div className="absolute bottom-5 left-6">
                       <span className="inline-flex items-center gap-2 text-white font-semibold text-sm transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
                         View Case Study

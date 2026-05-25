@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // Image imports
 import projectHmiImage from '@/assets/projects-hmi.png';
 import projectHrImage from '@/assets/project-hr.png';
+import projectManufacturingImage from '@/assets/project-manufacturing based ai.png';
 import projectAnalyticsImage from '@/assets/project-analytics.jpg';
 import projectAutomationImage from '@/assets/project-automation.jpg';
 import projectWebMobileImage from '@/assets/project-webmobile.jpg';
@@ -38,6 +39,18 @@ const FeaturedProjects = () => {
     },
     {
       id: 3,
+      title: 'AI-Powered Smart Manufacturing',
+      type: 'AI / Smart Manufacturing',
+      description:
+        'Built CMM Intelligence for Craftsman Automation — a real-time quality inspection platform with live dashboards, SPC analysis with X̄ & R charts, and auto-generated inspection reports connected directly to SQL Server CMM measurement data.',
+      badge: 'AI / MANUFACTURING',
+      badgeColor: 'bg-automation-green',
+      image: projectManufacturingImage,
+      link: '/projects#project-manufacturing',
+      caseStudyLink: '/projects/manufacturing',
+    },
+    {
+      id: 4,
       title: 'Advanced Data Analytics Dashboard',
       type: 'Data Visualization / BI',
       description:
@@ -48,7 +61,7 @@ const FeaturedProjects = () => {
       link: '/projects#project-analytics',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Intelligent Web & Document Automation Suite',
       type: 'Automation / AI',
       description:
@@ -59,7 +72,7 @@ const FeaturedProjects = () => {
       link: '/projects#project-automation',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Enterprise Web & Mobile Development Portfolio',
       type: 'Full Stack / Cross-Platform',
       description:
@@ -70,7 +83,7 @@ const FeaturedProjects = () => {
       link: '/projects#project-web-mobile',
     },
     {
-      id: 6,
+      id: 7,
       title: 'Advanced AI & Machine Learning Solutions',
       type: 'AI Product Development',
       description:
@@ -127,14 +140,12 @@ const FeaturedProjects = () => {
         </div>
 
         {/* Projects Hover Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 auto-rows-fr">
           {projects.map((project, index) => (
             <Link
               key={project.id}
               to={project.link}
-              className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-xl block ${
-                index === 0 || index === 1 ? 'sm:col-span-2 xl:col-span-2' : ''
-              }`}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-xl block"
             >
               <motion.article
                 initial={{ opacity: 0, y: 24 }}
