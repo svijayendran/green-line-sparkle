@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import projectHmiImage from '@/assets/projects-hmi.png';
 import projectHrImage from '@/assets/project-hr.png';
 import projectManufacturingImage from '@/assets/project-manufacturing based ai.png';
+import projectProductionDashboardImage from '@/assets/project-production and utility monitoring dashboard.png';
 import projectAnalyticsImage from '@/assets/project-analytics.jpg';
 import projectAutomationImage from '@/assets/project-automation.jpg';
 import projectWebMobileImage from '@/assets/project-webmobile.jpg';
@@ -51,6 +52,18 @@ const FeaturedProjects = () => {
     },
     {
       id: 4,
+      title: 'Production & Utility Monitoring Dashboard',
+      type: 'Production / Utility Monitoring',
+      description:
+        'Developed a real-time Production and Utility Monitoring Dashboard for Aqua Groups (AquaPump Industries). Tracks live OEE, shift-wise production targets, equipment status, active alarms, and utility consumption across Power, Water, Steam, and Air in a single unified interface.',
+      badge: 'PRODUCTION / UTILITY',
+      badgeColor: 'bg-automation-green',
+      image: projectProductionDashboardImage,
+      link: '/projects#project-production-dashboard',
+      caseStudyLink: '/projects/production-dashboard',
+    },
+    {
+      id: 5,
       title: 'Advanced Data Analytics Dashboard',
       type: 'Data Visualization / BI',
       description:
@@ -61,7 +74,7 @@ const FeaturedProjects = () => {
       link: '/projects#project-analytics',
     },
     {
-      id: 5,
+      id: 6,
       title: 'Intelligent Web & Document Automation Suite',
       type: 'Automation / AI',
       description:
@@ -72,7 +85,7 @@ const FeaturedProjects = () => {
       link: '/projects#project-automation',
     },
     {
-      id: 6,
+      id: 7,
       title: 'Enterprise Web & Mobile Development Portfolio',
       type: 'Full Stack / Cross-Platform',
       description:
@@ -83,7 +96,7 @@ const FeaturedProjects = () => {
       link: '/projects#project-web-mobile',
     },
     {
-      id: 7,
+      id: 8,
       title: 'Advanced AI & Machine Learning Solutions',
       type: 'AI Product Development',
       description:

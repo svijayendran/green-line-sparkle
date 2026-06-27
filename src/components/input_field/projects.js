@@ -31,6 +31,12 @@ export const projectsContent = {
       icon: "🏭"
     },
     {
+      title: "Production & Utility Monitoring Dashboard",
+      type: "Production / Utility Monitoring",
+      description: "Developed a comprehensive real-time Production and Utility Monitoring Dashboard for Aqua Groups (AquaPump Industries), providing full plant visibility through a unified interface. The system tracks live OEE, total production output, and shift-wise targets while monitoring downtime with comparison against previous shifts. Utility consumption is tracked across Power (kW), Water (m³/h), Steam (t/h), and Air (Nm³/h) in real time. Equipment status panels display running, idle, and stopped states across all production cells, with active alarm management including High Motor Temperature, Low Steam Pressure, and Water Flow Deviation. Built using React JS for the frontend dashboard and Python for backend data processing and API services.",
+      icon: "🏭"
+    },
+    {
       title: "Advanced Data Analytics Dashboard",
       type: "Data Visualization / BI", 
       description: "Engineered a cutting-edge real-time analytics platform that transforms complex multi-source data streams into actionable business intelligence. This comprehensive solution handles massive datasets from IoT sensors, enterprise systems, and external APIs, processing over 1 million data points per hour. The dashboard features dynamic visualization components including interactive time-series charts, heat maps, scatter plots, and geographical mapping capabilities. Advanced features include machine learning-powered anomaly detection, predictive trend analysis, and automated alert systems. The platform supports role-based access control, customizable KPI widgets, scheduled report generation, and seamless integration with existing business systems. Users can create custom queries using an intuitive drag-and-drop interface, export data in multiple formats, and set up automated workflows for data-driven decision making.",

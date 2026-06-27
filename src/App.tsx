@@ -16,6 +16,7 @@ import NotFound from './pages/NotFound';
 import HMIProject from './pages/HMIProject';
 import HRProject from './pages/HRProject';
 import ManufacturingProject from './pages/ManufacturingProject';
+import ProductionDashboardProject from './pages/ProductionDashboardProject';
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const AnimatedRoutes = () => {
         <Route path='/projects/hmi' element={<PageTransition><HMIProject /></PageTransition>} />
         <Route path='/projects/hr' element={<PageTransition><HRProject /></PageTransition>} />
         <Route path='/projects/manufacturing' element={<PageTransition><ManufacturingProject /></PageTransition>} />
+        <Route path='/projects/production-dashboard' element={<PageTransition><ProductionDashboardProject /></PageTransition>} />
         <Route path='*' element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>
