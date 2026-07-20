@@ -208,7 +208,7 @@ const Projects = () => {
                     href={client.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-10 text-2xl font-mono font-bold text-black hover:text-automation-green transition-colors duration-300 cursor-pointer tracking-tight"
+                    className="inline-block px-6 md:px-10 text-sm md:text-xl lg:text-2xl font-mono font-bold text-black hover:text-automation-green transition-colors duration-300 cursor-pointer tracking-tight"
                   >
                     {client.name.toUpperCase()}
                   </a>

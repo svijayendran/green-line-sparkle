@@ -109,7 +109,7 @@ const FeaturedProjects = () => {
   ];
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
@@ -169,7 +169,7 @@ const FeaturedProjects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-[220px] sm:h-[320px] md:h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/20" />

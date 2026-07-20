@@ -196,7 +196,7 @@ const ProductionDashboardProject = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative pt-28 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-24 pb-10 md:pt-28 md:pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-automation-green/10 blur-3xl" />
           <div className="absolute top-10 right-0 w-96 h-96 rounded-full bg-cyan-400/10 blur-3xl" />
@@ -219,7 +219,7 @@ const ProductionDashboardProject = () => {
                 Production & Utility{' '}
                 <span className="text-automation-green">Monitoring Dashboard</span>
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
                 A comprehensive IoT-powered monitoring platform built for Aqua Groups (AquaPump Industries),
                 delivering live machine status, shift production analytics, smart energy consumption tracking,
                 and loss analysis — all in one unified operator dashboard.
@@ -257,7 +257,7 @@ const ProductionDashboardProject = () => {
 
       {/* Key Highlights bar */}
       <section className="border-y border-border bg-muted/30 py-10 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {keyHighlights.map(({ Icon, title, description }, i) => (
             <motion.div
               key={title}
@@ -265,12 +265,12 @@ const ProductionDashboardProject = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex flex-col items-center text-center gap-3 p-4"
+              className="flex flex-col items-center text-center gap-2 md:gap-3 p-2 md:p-4"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-automation-green/10">
-                <Icon className="h-6 w-6 text-automation-green" />
+              <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl bg-automation-green/10">
+                <Icon className="h-5 w-5 md:h-6 md:w-6 text-automation-green" />
               </div>
-              <h3 className="font-semibold text-foreground text-sm">{title}</h3>
+              <h3 className="font-semibold text-foreground text-xs md:text-sm">{title}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{description}</p>
             </motion.div>
           ))}
@@ -278,8 +278,8 @@ const ProductionDashboardProject = () => {
       </section>
 
       {/* Project Sections */}
-      <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto space-y-28">
+      <section className="py-12 md:py-24 px-4">
+        <div className="max-w-7xl mx-auto space-y-16 lg:space-y-28">
           {projectSections.map((section, index) => {
             const isEven = index % 2 === 1;
             const { Icon } = section;
@@ -290,11 +290,11 @@ const ProductionDashboardProject = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.6 }}
-                className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-14`}
+                className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-14`}
               >
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-6xl font-black text-foreground/8 leading-none select-none">
+                    <span className="text-4xl md:text-6xl font-black text-foreground/8 leading-none select-none">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-automation-green/10 shrink-0">
