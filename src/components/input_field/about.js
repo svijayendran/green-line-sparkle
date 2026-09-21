@@ -39,11 +39,10 @@ export const aboutConfig = {
         position: "Chief Executive Officer",
         // experience: "20+ years in automation industry"
       },
-      {
-        name: "Santhosh",
-        position: "Data Engineer & Deliverables Manager",
-        // experience: "15+ years in industrial systems"
-      },
+      // {
+      //   name: "Santhosh",
+      //   position: "Data Engineer & Deliverables Manager",
+      // },
       {
         name: "Vijay",
         position: "Lead Automation Specialist & Control Systems Engineer",
